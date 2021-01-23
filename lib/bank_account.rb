@@ -10,4 +10,17 @@ class BankAccount
 
   def deposit(amount)
     @balance += amount
+  end
+
+  def display_balance
+    "Your balance is $#{@balance}."
+  end
+
+  def valid?
+
+  end
+
+  def close_account
+    @status = "closed"
+  end
 end
