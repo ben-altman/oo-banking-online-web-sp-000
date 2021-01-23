@@ -15,10 +15,10 @@ class Transfer
   end
 
   def execute_transaction
-    if self.valid? == true && sender.balance > @amount
+    if self.valid? == true && sender.balance > @amount && @status != "complete"
       sender.balance -= @amount
       receiver.balance += @amount
-      @amount -= @amount
+      
       @status = "complete"
 
     else
